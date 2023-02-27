@@ -23,8 +23,8 @@ body {
 	overflow-x: hidden;
 	background-color: inherit;
 	width: 95%;
-	margin: auto;
 	font-family: 'Neue Montreal', sans-serif;
+	margin: auto;
 }
 
 h2 {
@@ -138,20 +138,27 @@ article {
 }
 
 .condensed-grid .grid-item {
-	padding:  1rem .5rem;
+	padding:  1rem;
 }
 
 .grid-item {
-	padding: .2rem .5rem;
+	padding: 1rem;
 	border-right: 1px solid;
-	/* border-bottom: 1px solid; */
+	border-bottom: 1px solid;
 	border-radius: inherit;
 	position: relative;
 	word-wrap: break-word;
-	border-bottom: 1px solid black;
-
-	&:nth-child(odd) {}
 }
+
+.grid-item p {
+	padding: 0;
+	margin: 0;
+}
+
+.grid-item:first-child p {
+	padding-bottom: 10px;
+}
+
 
 .grid-item.span-2.about {
 	border-bottom: 1px solid;
