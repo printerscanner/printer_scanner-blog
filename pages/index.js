@@ -22,17 +22,6 @@ export default function Home({ posts }) {
 				<div className="grid-item grid-item--link"><a href="https://printerscanner.net">↗ printer_scanner</a></div>
 			</div>
 			<div className="grid-layout">
-				<div className="grid-item span-2 about">
-					<p>The <b>printer_scanner</b> blog aims to solve the worlds toughest questions through thoughtful, reasoned dialog.</p>
-
-					<p>printer_scanner is run by the multi-award winning graphic designer, <a href="https://abbeyyacoe.info">abbey</a>. We explore themes related to printing and scanning.</p>
-
-					<p>This blog is built with Notion as the backend. You can take a look at the database <a href="https://www.notion.so/printer-scanner/d6acfbec7b734db09375cf20d5298db2?v=9ce0c0a99a824a949a6e328b32b7262a">here</a>.</p>
-
-					<p>
-						If you have a complaint, or would like to get in touch, our email is <a href="mailto:contact@printerscanner.net"> contact@printerscanner.net</a>. You can also find us on <a href="https://instagram.com/printer_scanner">Instagram</a>.
-					</p>
-				</div>
 				{posts.map((post) => {
 					const date = new Date(post.created_time).toLocaleString(
 						"en-US",
@@ -50,7 +39,7 @@ export default function Home({ posts }) {
 								</p>
 
 								{/* <p className="date">{post.properties.Year.number}</p> */}
-								<p>Read post →</p>
+								{/* <p>Read post →</p> */}
 							</Link>
 						</div>
 					);
