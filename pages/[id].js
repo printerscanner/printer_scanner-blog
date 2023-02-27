@@ -190,18 +190,19 @@ export default function Post({ page, blocks }) {
 				</section>
 			</article>
 			<footer>
-				<br />
-				<div className="grid-layout condensed-grid">
-					<div className="grid-item">
-						<a href="mailto:contact@printerscanner.net">
-							contact@printerscanner.net
-						</a>
-					</div>
-					<div className="grid-item span-4"></div>
-					<div className="grid-item"><a className="right" href="https://instagram.com/printer_scanner">Instagram</a></div>
-				</div>
-				<br />
-			</footer>
+      <br />
+      <div className="grid-layout condensed-grid">
+        <div className="grid-item span-2">
+          <a href="mailto:contact@printerscanner.net">
+            contact@printerscanner.net
+          </a>
+        </div>
+				 <div className="grid-item span-2"></div>
+				<div className="grid-item"><a href="https://www.are.na/printer-scanner">are.na</a></div>
+				<div className="grid-item"><a className="right" href="https://instagram.com/printer_scanner">Instagram</a></div>
+      </div>
+      <br />
+    </footer>
 		</div>
 	);
 }
