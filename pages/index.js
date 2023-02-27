@@ -34,7 +34,6 @@ export default function Home({ posts }) {
 					</p>
 				</div>
 				{posts.map((post) => {
-					console.log(post)
 					const date = new Date(post.created_time).toLocaleString(
 						"en-US",
 						{
@@ -46,9 +45,9 @@ export default function Home({ posts }) {
 					return (
 						<div key={post.id} className="grid-item">
 							<Link href={`/${post.id}`}>
-								<h2>
-									<Text text={post.properties.Name.title} />
-								</h2>
+								<p>
+									<b><Text text={post.properties.Name.title} /></b>
+								</p>
 
 								{/* <p className="date">{post.properties.Year.number}</p> */}
 								<p>Read post →</p>
@@ -58,18 +57,19 @@ export default function Home({ posts }) {
 				})}
 			</div>
 			<footer>
-				<br />
-				<div className="grid-layout condensed-grid">
-					<div className="grid-item">
-						<a href="mailto:contact@printerscanner.net">
-							contact@printerscanner.net
-						</a>
-					</div>
-					<div className="grid-item span-4"></div>
-					<div className="grid-item"><a className="right" href="https://instagram.com/printer_scanner">Instagram</a></div>
-				</div>
-				<br />
-			</footer>
+      <br />
+      <div className="grid-layout condensed-grid">
+        <div className="grid-item span-2">
+          <a href="mailto:contact@printerscanner.net">
+            contact@printerscanner.net
+          </a>
+        </div>
+				 <div className="grid-item span-2"></div>
+				<div className="grid-item"><a href="https://www.are.na/printer-scanner">are.na</a></div>
+				<div className="grid-item"><a className="right" href="https://instagram.com/printer_scanner">Instagram</a></div>
+      </div>
+      <br />
+    </footer>
 		</div>
 	);
 }
