@@ -148,6 +148,7 @@ article {
 	border-radius: inherit;
 	position: relative;
 	word-wrap: break-word;
+	border-bottom: 1px solid black;
 
 	&:nth-child(odd) {}
 }

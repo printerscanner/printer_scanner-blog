@@ -165,12 +165,15 @@ export default function Post({ page, blocks }) {
 				<title>{page.properties.Name.title[0].plain_text}</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div>
-				<div className="grid-layout condensed-grid">
-					<div className="grid-item"><Link href="/"><h1 className="logo">the blog</h1></Link></div>
-					<div className="grid-item span-4"></div>
-					<div className="grid-item grid-item--link"><a href="https://printerscanner.net">↗ printer_scanner</a></div>
+			<div className="grid-layout condensed-grid">
+				<div className="grid-item"><Link href="/"><h1 className="logo">the blog</h1></Link></div>
+				<div className="grid-item span-3"></div>
+				<div className="grid-item grid-item--link">
+					<a className="right" href="https://instagram.com/printer_scanner">
+						Instagram
+					</a>
 				</div>
+				<div className="grid-item grid-item--link"><a href="https://printerscanner.net">↗ printer_scanner</a></div>
 			</div>
 			<Link href="/" className={styles.back}>
 				←
