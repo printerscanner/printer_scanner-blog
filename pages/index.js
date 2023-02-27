@@ -9,7 +9,7 @@ export default function Home({ posts }) {
 		<div>
 			<Head>
 				<title>printer_scanner</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<div className="grid-layout condensed-grid">
 				<div className="grid-item"><Link href="/"><h1 className="logo">printer_scanner blog</h1></Link></div>

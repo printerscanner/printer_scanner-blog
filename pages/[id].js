@@ -163,7 +163,7 @@ export default function Post({ page, blocks }) {
 		<div>
 			<Head>
 				<title>{page.properties.Name.title[0].plain_text}</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<div className="grid-layout condensed-grid">
 				<div className="grid-item"><Link href="/"><h1 className="logo">printer_scanner blog</h1></Link></div>
