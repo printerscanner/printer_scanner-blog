@@ -12,8 +12,8 @@ export default function Home({ posts }) {
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<div className="grid-layout condensed-grid">
-				<div className="grid-item"><Link href="/"><h1 className="logo">printer_scanner blog</h1></Link></div>
-				<div className="grid-item span-3"></div>
+				<div className="grid-item span-2"><Link href="/"><h1 className="logo">printer_scanner blog</h1></Link></div>
+				<div className="grid-item span-2"></div>
 				<div className="grid-item grid-item--link">
 					<a className="right" href="https://instagram.com/printer_scanner">
 						Instagram
