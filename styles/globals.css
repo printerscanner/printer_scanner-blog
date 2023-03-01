@@ -21,7 +21,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
-	background-color: inherit;
+	background-color: #F7F1E9;
+	color: #131313;
 	width: 95%;
 	font-family: 'Neue Montreal', sans-serif;
 	margin: auto;
@@ -260,5 +261,11 @@ article {
 	}
 	.blog {
 		width: 100%;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #002DF2;
+		color: #E0E0E0;
 	}
 }

@@ -94,6 +94,7 @@
 @media (prefers-color-scheme: dark) {
 	.code {
 		background-color: rgb(15, 8, 28);
+		color: white;
 	}
 
 	.file:hover {
