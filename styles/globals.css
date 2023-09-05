@@ -21,8 +21,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
-	background-color: #F7F1E9;
-	color: #131313;
+	background-color: rgb(14, 46, 70);
+	color: #EDD1B8;
 	width: 95%;
 	font-family: 'Neue Montreal', sans-serif;
 	margin: auto;
@@ -129,7 +129,6 @@ article {
 	grid-auto-rows: minmax(100px, auto);
 	grid-auto-flow: dense;
 	margin-top: 30px;
-	border: 1px solid;
 }
 
 .grid-layout.condensed-grid {
@@ -146,6 +145,8 @@ article {
 	border-radius: inherit;
 	position: relative;
 	word-wrap: break-word;
+	margin: 8px;
+	border-radius: 3px;
 }
 
 .grid-item p {
@@ -261,11 +262,5 @@ article {
 	}
 	.blog {
 		width: 100%;
-	}
-}
-@media (prefers-color-scheme: dark) {
-	body {
-		background-color: #002DF2;
-		color: #E0E0E0;
 	}
 }

@@ -1,7 +1,34 @@
 import Head from "next/head";
 import Link from "next/link";
 import { getDatabase } from "../lib/notion";
-import { Text } from "./[id].js";
+import { Text } from "./[slug].js";
+
+const rgb = [100, 50, 0];
+
+
+function setContrast() {
+	// Randomly update colours
+	rgb[0] = Math.round(Math.random() * 255);
+	rgb[1] = Math.round(Math.random() * 255);
+	rgb[2] = Math.round(Math.random() * 255);
+  
+	// http://www.w3.org/TR/AERT#color-contrast
+	const brightness = Math.round(((parseInt(rgb[0]) * 299) +
+						(parseInt(rgb[1]) * 587) +
+						(parseInt(rgb[2]) * 114)) / 1000);
+	const textColour = (brightness > 125) ? '#202020' : '#e7e7e7';
+	const backgroundColour = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+	return {textColour:textColour, backgroundColour:backgroundColour }
+  }
+  let Vals = setContrast();
+
+  <style jsx global>{`
+  body {
+    background-color: ${Vals.backgroundColour};
+    color: ${Vals.textColour};
+  }
+`}</style>
+
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 export default function Home({ posts }) {
@@ -23,17 +50,9 @@ export default function Home({ posts }) {
 			</div>
 			<div className="grid-layout">
 				{posts.map((post) => {
-					const date = new Date(post.created_time).toLocaleString(
-						"en-US",
-						{
-							month: "short",
-							day: "2-digit",
-							year: "numeric",
-						}
-					);
 					return (
 						<div key={post.id} className="grid-item">
-							<Link href={`/${post.id}`}>
+							<Link href={`/${post.properties.slug.rich_text[0]?.plain_text}`}>
 								<p>
 									<b><Text text={post.properties.Name.title} /></b>
 								</p>

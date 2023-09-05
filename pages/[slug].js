@@ -3,7 +3,6 @@ import Head from "next/head";
 import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import Link from "next/link";
 import { databaseId } from "./index.js";
-import styles from "./post.module.css";
 
 export const Text = ({ text }) => {
 	if (!text) {
@@ -210,13 +209,15 @@ export default function Post({ page, blocks }) {
 export const getStaticPaths = async () => {
 	const database = await getDatabase(databaseId);
 	return {
-		paths: database.map((page) => ({ params: { id: page.id } })),
+		paths: database.map((page) => ({ params: { slug: page.properties.slug.rich_text[0]?.plain_text } })),
 		fallback: true,
 	};
 };
 
 export const getStaticProps = async (context) => {
-	const { id } = context.params;
+	const { slug } = context.params;
+	const database = await getDatabase(databaseId);
+	const id = database.find((post) => post.properties.slug.rich_text[0]?.plain_text === slug).id;
 	const page = await getPage(id);
 	const blocks = await getBlocks(id);
 
